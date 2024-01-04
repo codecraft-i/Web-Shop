@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store</title>
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="internalAll.css">
+    <link rel="stylesheet" href="theExtraRJ.css">
+    <!-- Google FOnts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    <!-- Bpxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Slick JS -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+</head>
+<body>
+    <div class="container">
+        <div id="progress" style="display: grid !important;">
+            <span id="progress-value" style="transform: rotate(90deg);"><i class='bx bx-chevrons-left'></i></span>
+        </div>
+        <div class="help-window-box">
+            <span>
+                <i class='bx bx-message-rounded-dots' ></i>
+            </span>
+        </div>
+        <div class="help-windows-progress-menu">
+            <div class="help-windows-progress-menu-heading">
+                <div class="hWPMH_i1">
+                    <img src="./assets/logo.png" alt="*">
+                    <span>Служба поддержки</span>
+                    <small id="hWPM-cancel"><ion-icon name="close-outline"></ion-icon></small>
+                </div>
+                <div class="hWPMH_i2">
+                    <span>Select the Options</span>
+                </div>
+            </div>
+            <div class="hWPM_content-box">
+                <a href="#" class="hMO-link1">Open Telegram Chat</a>
+                <a href="#" class="hMO-link1">Open Online Chat</a>
+                <a href="#" class="hMO-link2">Call me</a>
+            </div>
+        </div>
+        <div class="header">
+            <div class="head-f">
+                <a href="tel:+998999999999" class="mobile-num-addres"><i class='bx bxs-phone'></i></a>
+                <div class="rs-logo">
+                    <a href="index.html"><img src="./assets/logo.png" alt="*" /></a>
+                </div>
+                <div class="he-f1-row">
+                    <a href="#" class="he-f1-f1 discount"><img src="./assets/discount.png" alt="*"> Discount</a>
+                    <a href="#" class="he-f1-f2 about"><img src="./assets/about.png" alt="*"> About</a>
+                </div>
+                <div class="he-f2-row">
+                    <div class="he-f2-box">
+                        <a href="#" class="he-f2">Ansver and Questions ?</a>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropdown-btn" onclick="toggleDropdown()"><img class="selected_languageIcon" src="./assets/uz.png" alt="O`zbek"> O`zbek</button>
+                        <div class="dropdown-content" id="myDropdown">
+                            <a href="#" onclick="selectOption('O`zbek', './assets/uz.png')">
+                                <img class="selected_languageIcon" src="./assets/uz.png" alt="O`zbek"> O`zbek
+                            </a>
+                            <a href="#" onclick="selectOption('Русский', './assets/ru.png')">
+                                <img class="selected_languageIcon" src="./assets/ru.png" alt="Русский"> Русский
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="head-s">
+                <div class="logo-box">
+                    <a href="index.html" id="logo-c">
+                        <img class="logo" src="./assets/logo.png" alt="*">
+                    </a>
+                </div>
+                <div class="caBox">
+                    <button id="catalog">
+                        <img src="./assets/flyer.png" alt="*">
+                        Directory
+                    </button>
+                </div>
+                <div class="wrapper">
+                    <div class="search-input">
+                      <a href="" target="_blank" hidden></a>
+                      <input type="text" placeholder="Type to search..">
+                      <div class="autocom-box">
+                        <!-- here list are inserted from javascript -->
+                      </div>
+                      <div class="icon"><i class="fas fa-search"></i></div>
+                    </div>
+                </div>
+                <div class="re-sHeader-menu">
+                    <button><i class='bx bx-menu'></i></button>
+                  </div>
+                <div class="persolor-data">
+                    <a href="likes.html" class="pf-address">
+                        <div class="pf-list">
+                            <i class='bx bx-heart'></i>
+                            <span>Likes</span>
+                            <div class="pf-counter pf-he"><span>1</span></div>
+                        </div>
+                    </a>
+                    <a href="/basket.html" class="pf-address">
+                        <div class="pf-list">
+                            <i class='bx bx-shopping-bag' ></i>
+                            <span>Basket</span>
+                            <div class="pf-counter pf-bs"><span>4</span></div>
+                        </div>
+                    </a>
+                    <a href="javascript:void(0);" class="pf-address" id="pfAddressLogin">
+                        <div class="pf-list">
+                            <i class='bx bx-user' ></i>
+                            <span>Login</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mainLR-boxh" id="mainLR-boxh">
+                <div class="login_r-box">
+                    <div class="exit-r-l"><i class='bx bx-plus'></i></div>
+                    <div>
+                    <h2>Enter the phone number. A verification code will be sent via SMS.</h2>
+                    <form id="registrationForm" method="GET">
+                        <label htmlFor="phoneNumber">Phone Number:</label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="(**) *** ** **" pattern="998[0-9]{9}" maxLength={9} required />
+                        <label htmlFor="verificationCode">Confirmation code:</label>
+                        <input type="number" id="verificationCode" name="verificationCode" placeholder="6 digit number" maxLength={6} step="" required />
+                        <button type="button" onclick="sendVerificationCode()">Get the code</button>
+                    </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="responece-bot-menu">
+                <a href="index.html" class="botNavLink botNavLinkActive"><span><i class='bx bx-home' ></i></span> <small>Home</small></a>
+                <a href="javascript:void(0)" class="botNavLink" id="directoryC"><span><i class='bx bx-menu'></i></span> <small>Directory</small></a>
+                <a href="/likes.html" class="botNavLink"><span><i class='bx bx-heart'></i></span> <small>Likes</small></a>
+                <a href="/basket.html" class="botNavLink"><span><i class='bx bx-shopping-bag'></i></span> <small>Basket</small></a>
+                <a href="/profile.html" class="botNavLink"><span><i class='bx bx-user' ></i></span> <small>Profile</small></a>
+            </div>
+
+            <div class="mn-but-head-menu">
+                <div class="mnButHeTitle"><span>Menu</span></div>
+                <div class="mn-but-head-close" id="mn-but-head-close"><i class='bx bx-plus'></i></div>
+                <div class="mn-m-if1-box">
+                  <div class="he-f1-row-mn">
+                    <a href="/discount" class="he-f1-f1 discount"><img src="assets/discount.png" alt="*" /> Discount</a>
+                    <a href="/about" class="he-f1-f2 about"><img src="assets/about.png" alt="*" /> About</a>
+                  </div>
+                </div>
+                <div class="qA-mn-bH-box-is2">
+                  <div class="he-f2-box-mn">
+                    <a href="/" class="he-f2">Ansver and Questions ?</a>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="internal_header">
+            <div class="wrapper-s-header">
+                <div class="icons"><i id="left" class="fa-solid fa-angle-left"></i></div>
+                <ul class="tabs-box">
+                  <li class="tab"><a href="#"><img class="tabsIcons" src="./assets/Header/electronics.png" alt="*">Electronics</a></li>
+                  <li class="tab"><a href="#"><img class="tabsIcons" src="./assets/Header/household_appliances.png" alt="*">Household appliances</a></li>
+                  <li class="tab"><a href="#"><img class="tabsIcons" src="./assets/Header/clothes.png" alt="*">Clothes</a></li>
+                  <li class="tab"><a href="#"><img class="tabsIcons" src="./assets/Header/accessories.png" alt="*">Accessories</a></li>
+                  <li class="tab"><a href="#"><img class="tabsIcons" src="./assets/Header/beautiful.png" alt="*">Beautiful</a></li>
+                  <li class="tab"><a href="#"><img class="tabsIcons" src="./assets/Header/books.png" alt="*">Books</a></li>
+                  <li class="tab"><a href="#"><img class="tabsIcons" src="./assets/Header/household_items.png" alt="*">Household items</a></li>
+                  <li class="tab"><a href="#"><img class="tabsIcons" src="./assets/Header/construction.png" alt="*">Construction and Repair</a></li>
+                </ul>
+                <div class="icons"><i id="right" class="fa-solid fa-angle-right"></i></div>
+            </div>
+        </div>
+
+        <div class="menu-catalog">
+            <div class="menu-catalog1">
+                <div class="menuC-head"><Span>All Products Catalog</Span> <span id="category-close-f"><ion-icon name="close-outline"></ion-icon></span></div>
+                <a href="#" class="menuCI-active"><img src="./assets/Header/books.png" alt="*"> Books</a>
+                <a href="#" ><img src="./assets/Header/electronics.png" alt="*"> Electronic</a>
+                <a href="#" ><img src="./assets/Header/household_appliances.png" alt="*"> Household appliances</a>
+                <a href="#" ><img src="./assets/Header/clothes.png" alt="*"> Clothes</a>
+                <a href="#" ><img src="./assets/Header/accessories.png" alt="*"> Accessories</a>
+                <a href="#" ><img src="./assets/Header/beautiful.png" alt="*"> Beautiful</a>
+                <a href="#" ><img src="./assets/Header/books.png" alt="*"> Household items</a>
+                <a href="#" ><img src="./assets/Header/household_items.png" alt="*"> Construction and Repair</a>
+                <a href="#" ><img src="./assets/Header/construction.png" alt="*"> Home</a>
+                <a href="#" ><img src="./assets/Header//Catalog/car.png" alt="*"> Card</a>
+                <a href="#" ><img src="./assets/Header//Catalog/diet.png" alt="*"> Foods</a>
+                <a href="#" ><img src="./assets/Header//Catalog/dog.png" alt="*"> Animals</a>
+                <a href="#" ><img src="./assets/Header//Catalog/heart.png" alt="*"> Healthy</a>
+                <a href="#" ><img src="./assets/Header//Catalog/hobby.png" alt="*"> Music intruments</a>
+                <a href="#" ><img src="./assets/Header//Catalog/lifestyle.png" alt="*"> Hobby</a>
+                <a href="#" ><img src="./assets/Header//Catalog/promotion.png" alt="*"> Prise</a>
+            </div>
+            <div class="menu-catalog2">
+                <div class="menu-catalog2-head"><span>All types Books</span> <span id="category-close"><ion-icon name="close-outline"></ion-icon></span></div>
+                <div class="menu-catalog2_content-box">
+                    <div class="menu-catalog2_content-box-items">
+                        <span><a href="#">"Books Title" | Бизнес-литература</a> ></span>
+                        <a href="#">Бизнес образование и развитие карьеры</a>
+                        <a href="#">Менеджмент и управление</a>
+                        <a href="#">Маркетинг и продажи</a>
+                        <a href="#">Экономика</a>
+                        <a href="#">Индустрии</a>
+                        <a href="#">Финансы</a>
+                        <a href="#">Инвестиции и недвижимость</a>
+                        <a href="#">Навыки</a>
+                    </div>
+                    <div class="menu-catalog2_content-box-items">
+                        <span><a href="#">Художественная литература</a> ></span>
+                        <a href="#">Фантастика</a>
+                        <a href="#">Приключения</a>
+                        <a href="#">Детективы</a>
+                        <a href="#">Боевики</a>
+                        <a href="#">Фэнтези</a>
+                        <a href="#">Молодежная и подростковая литература</a>
+                        <a href="#">Ужасы, триллеры</a>
+                        <a href="#">Поэзия</a>
+                    </div>
+                    <div class="menu-catalog2_content-box-items">
+                        <span><a href="#">Учебная литература</a> ></span>
+                        <a href="#">Изучение иностранных языков</a>
+                        <a href="#">Образовательные программы</a>
+                        <a href="#">Учебно-методическая литература</a>
+                        <a href="#">1 класс</a>
+                        <a href="#">3 класс</a>
+                        <a href="#">2 класс</a>
+                        <a href="#">4 класс</a>
+                        <a href="#">Абитуриентам, студентам и аспирантам</a>
+                        <a href="#">10 класс</a>
+                        <a href="#">ЕГЭ</a>
+                        <a href="#">8 класс</a>
+                        <a href="#">5 класс</a>
+                        <a href="#">11 класс</a>
+                        <a href="#">7 класс</a>
+                        <a href="#">ОГЭ (ГИА)</a>
+                        <a href="#">6 класс</a>
+                        <a href="#">9 класс</a>
+                        <a href="#">Итоговое тестирование и ВПР</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sliderBar-container">
+            <div class="slider">
+                <div class="picF1Pic picF1PicFB1">
+                    <a href="#">
+                        <img class="picF1BPic" src="./assets/i-img1.jpg" alt="*">
+                    </a>
+                </div>
+                <div class="picF1Pic picF1PicFB1">
+                    <a href="#">
+                        <img class="picF1BPic" src="./assets/i-img2.jpg" alt="*">
+                    </a>
+                </div>
+                <div class="picF1Pic picF1PicFB1">
+                    <a href="#">
+                        <img class="picF1BPic" src="./assets/i-img3.jpg" alt="*">
+                    </a>
+                </div>
+                <div class="picF1Pic picF1PicFB1">
+                    <a href="#">
+                        <img class="picF1BPic" src="./assets/i-img4.jpg" alt="*">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content-box">
+            <div class="products-box">
+                <a href="product-details.html" class="products-box-address">
+                    <div class="pro-card">
+                        <div class="pro-image_box">
+                            <img class="pro-img" src="./assets/Products/cm015qpm4v40qhefsl80.jpg" alt="*">
+                        </div>
+                        <div class="pro-data">
+                            <div class="pro-description"><span>
+                                Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                              </span></div>
+                            <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                            <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                            <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                        </div>
+                        <div class="sale-r"><img src="./assets/discount-do.png" alt="*"> <span>In the sale</span></div>
+                    </div>
+                </a>
+            </div>
+            <div class="products-box">
+                <a href="product-details.html" class="products-box-address">
+                    <div class="pro-card">
+                        <div class="pro-image_box">
+                            <img class="pro-img" src="./assets/Products/cm4nr5bifoubkc6m5k9g.jpg" alt="*">
+                        </div>
+                        <div class="pro-data">
+                            <div class="pro-description"><span>
+                                Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                            </span></div>
+                            <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                            <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                            <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="products-box">
+                <a href="product-details.html" class="products-box-address">
+                    <div class="pro-card">
+                        <div class="pro-image_box">
+                            <img class="pro-img" src="./assets/Products/clm9av5enntcj8aa5720.jpg" alt="*">
+                        </div>
+                        <div class="pro-data">
+                            <div class="pro-description"><span>
+                                Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                            </span></div>
+                            <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                            <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                            <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                        </div>
+                        <div class="sale-r --red"><img src="./assets/discount-do.png" alt="*"> <span>In the sale</span></div>
+                    </div>
+                </a>
+            </div>
+            <div class="products-box">
+                <a href="product-details.html" class="products-box-address">
+                    <div class="pro-card">
+                        <div class="pro-image_box">
+                            <img class="pro-img" src="./assets/Products/cgcklrvhj8j9g69ah6ug.jpg" alt="*">
+                        </div>
+                        <div class="pro-data">
+                            <div class="pro-description"><span>
+                                Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                            </span></div>
+                            <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                            <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                            <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                        </div>
+                        <div class="sale-r --blue"><img src="./assets/discount-do.png" alt="*"> <span>In the sale</span></div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="products-box">
+                <a href="product-details.html" class="products-box-address">
+                    <div class="pro-card">
+                        <div class="pro-image_box">
+                            <img class="pro-img" src="./assets/Products/cgk51tj57mg9720de93g.jpg" alt="*">
+                        </div>
+                        <div class="pro-data">
+                            <div class="pro-description"><span>
+                                Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                            </span></div>
+                            <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                            <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                            <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="products-box">
+                <a href="product-details.html" class="products-box-address">
+                    <div class="pro-card">
+                        <div class="pro-image_box">
+                            <img class="pro-img" src="./assets/Products/cjhnbpkvutv1klhdm3d0.jpg" alt="*">
+                        </div>
+                        <div class="pro-data">
+                            <div class="pro-description"><span>
+                                Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                            </span></div>
+                            <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                            <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                            <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="products-box">
+                <a href="product-details.html" class="products-box-address">
+                    <div class="pro-card">
+                        <div class="pro-image_box">
+                            <img class="pro-img" src="./assets/Products/cjvfngcjvf2qegt3945g.jpg" alt="*">
+                        </div>
+                        <div class="pro-data">
+                            <div class="pro-description"><span>
+                                Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                            </span></div>
+                            <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                            <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                            <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                        </div>
+                        <div class="sale-r"><img src="./assets/discount-do.png" alt="*"> <span>In the sale</span></div>
+                    </div>
+                </a>
+            </div>
+            <div class="products-box">
+                <a href="product-details.html" class="products-box-address">
+                    <div class="pro-card">
+                        <div class="pro-image_box">
+                            <img class="pro-img" src="./assets/Products/clgdaf5ennt1kt4dklkg.jpg" alt="*">
+                        </div>
+                        <div class="pro-data">
+                            <div class="pro-description"><span>
+                                Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                            </span></div>
+                            <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                            <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                            <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="products-box">
+                <a href="product-details.html" class="products-box-address">
+                    <div class="pro-card">
+                        <div class="pro-image_box">
+                            <img class="pro-img" src="./assets/Products/clje9atennt6m290dtsg.jpg" alt="*">
+                        </div>
+                        <div class="pro-data">
+                            <div class="pro-description"><span>
+                                Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                            </span></div>
+                            <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                            <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                            <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="products-box">
+                <a href="product-details.html" class="products-box-address">
+                    <div class="pro-card">
+                        <div class="pro-image_box">
+                            <img class="pro-img" src="./assets/Products/cm015qpm4v40qhefsl80.jpg" alt="*">
+                        </div>
+                        <div class="pro-data">
+                            <div class="pro-description"><span>
+                                Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                            </span></div>
+                            <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                            <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                            <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                        </div>
+                        <div class="sale-r"><img src="./assets/discount-do.png" alt="*"> <span>In the sale</span></div>
+                    </div>
+                </a>
+            </div>
+            <div class="products-box">
+                <a href="product-details.html" class="products-box-address">
+                    <div class="pro-card">
+                        <div class="pro-image_box">
+                            <img class="pro-img" src="./assets/Products/cm0ijlhuf2i84h4p58ag.jpg" alt="*">
+                        </div>
+                        <div class="pro-data">
+                            <div class="pro-description"><span>
+                                Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                            </span></div>
+                            <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                            <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                            <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                        </div>
+                        <div class="sale-r --red"><img src="./assets/discount-do.png" alt="*"> <span>In the sale</span></div>
+                    </div>
+                </a>
+            </div>
+            <div class="products-box">
+                <a href="product-details.html" class="products-box-address">
+                    <div class="pro-card">
+                        <div class="pro-image_box">
+                            <img class="pro-img" src="./assets/Products/cm4nr5bifoubkc6m5k9g.jpg" alt="*">
+                        </div>
+                        <div class="pro-data">
+                            <div class="pro-description"><span>
+                                Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                            </span></div>
+                            <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                            <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                            <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                        </div>
+                        <div class="sale-r --blue"><img src="./assets/discount-do.png" alt="*"> <span>In the sale</span></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="content-r-image-box">
+            <a href="#">
+                <img src="./assets/i-img1.jpg" alt="*">
+            </a>
+        </div>
+
+        
+        <div class="main-content-box">
+            <div class="products-box">
+                <a href="product-details.html" class="products-box-address">
+                    <div class="pro-card">
+                        <div class="pro-image_box">
+                            <img class="pro-img" src="./assets/Products/cm015qpm4v40qhefsl80.jpg" alt="*">
+                        </div>
+                        <div class="pro-data">
+                            <div class="pro-description"><span>
+                                Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                            </span></div>
+                            <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                            <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                            <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                        </div>
+                        <div class="sale-r"><img src="./assets/discount-do.png" alt="*"> <span>In the sale</span></div>
+                    </div>
+                </a>
+            </div>
+            <div class="products-box">
+                <a href="product-details.html" class="products-box-address">
+                    <div class="pro-card">
+                        <div class="pro-image_box">
+                            <img class="pro-img" src="./assets/Products/cm4nr5bifoubkc6m5k9g.jpg" alt="*">
+                        </div>
+                        <div class="pro-data">
+                            <div class="pro-description"><span>
+                                Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                            </span></div>
+                            <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                            <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                            <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="products-box">
+                <a href="product-details.html" class="products-box-address">
+                    <div class="pro-card">
+                        <div class="pro-image_box">
+                            <img class="pro-img" src="./assets/Products/clm9av5enntcj8aa5720.jpg" alt="*">
+                        </div>
+                        <div class="pro-data">
+                            <div class="pro-description"><span>
+                                Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                            </span></div>
+                            <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                            <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                            <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                        </div>
+                        <div class="sale-r --red"><img src="./assets/discount-do.png" alt="*"> <span>In the sale</span></div>
+                    </div>
+                </a>
+            </div>
+            <div class="products-box">
+                <a href="product-details.html" class="products-box-address">
+                    <div class="pro-card">
+                        <div class="pro-image_box">
+                            <img class="pro-img" src="./assets/Products/cgcklrvhj8j9g69ah6ug.jpg" alt="*">
+                        </div>
+                        <div class="pro-data">
+                            <div class="pro-description"><span>
+                                Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                            </span></div>
+                            <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                            <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                            <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                        </div>
+                        <div class="sale-r --blue"><img src="./assets/discount-do.png" alt="*"> <span>In the sale</span></div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="products-box">
+                <a href="product-details.html" class="products-box-address">
+                    <div class="pro-card">
+                        <div class="pro-image_box">
+                            <img class="pro-img" src="./assets/Products/cgk51tj57mg9720de93g.jpg" alt="*">
+                        </div>
+                        <div class="pro-data">
+                            <div class="pro-description"><span>
+                                Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                            </span></div>
+                            <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                            <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                            <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="products-box">
+                <a href="product-details.html" class="products-box-address">
+                    <div class="pro-card">
+                        <div class="pro-image_box">
+                            <img class="pro-img" src="./assets/Products/cjhnbpkvutv1klhdm3d0.jpg" alt="*">
+                        </div>
+                        <div class="pro-data">
+                            <div class="pro-description"><span>
+                                Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                            </span></div>
+                            <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                            <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                            <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="products-box">
+                <a href="product-details.html" class="products-box-address">
+                    <div class="pro-card">
+                        <div class="pro-image_box">
+                            <img class="pro-img" src="./assets/Products/cjvfngcjvf2qegt3945g.jpg" alt="*">
+                        </div>
+                        <div class="pro-data">
+                            <div class="pro-description"><span>
+                                Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                            </span></div>
+                            <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                            <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                            <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                        </div>
+                        <div class="sale-r"><img src="./assets/discount-do.png" alt="*"> <span>In the sale</span></div>
+                    </div>
+                </a>
+            </div>
+            <div class="products-box">
+                <a href="product-details.html" class="products-box-address">
+                    <div class="pro-card">
+                        <div class="pro-image_box">
+                            <img class="pro-img" src="./assets/Products/clgdaf5ennt1kt4dklkg.jpg" alt="*">
+                        </div>
+                        <div class="pro-data">
+                            <div class="pro-description"><span>
+                                Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                            </span></div>
+                            <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                            <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                            <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="products-box">
+                <a href="product-details.html" class="products-box-address">
+                    <div class="pro-card">
+                        <div class="pro-image_box">
+                            <img class="pro-img" src="./assets/Products/clje9atennt6m290dtsg.jpg" alt="*">
+                        </div>
+                        <div class="pro-data">
+                            <div class="pro-description"><span>
+                                Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                            </span></div>
+                            <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                            <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                            <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="products-box">
+                <a href="product-details.html" class="products-box-address">
+                    <div class="pro-card">
+                        <div class="pro-image_box">
+                            <img class="pro-img" src="./assets/Products/cm015qpm4v40qhefsl80.jpg" alt="*">
+                        </div>
+                        <div class="pro-data">
+                            <div class="pro-description"><span>
+                                Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                            </span></div>
+                            <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                            <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                            <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                        </div>
+                        <div class="sale-r"><img src="./assets/discount-do.png" alt="*"> <span>In the sale</span></div>
+                    </div>
+                </a>
+            </div>
+            <div class="products-box">
+                <a href="product-details.html" class="products-box-address">
+                    <div class="pro-card">
+                        <div class="pro-image_box">
+                            <img class="pro-img" src="./assets/Products/cm0ijlhuf2i84h4p58ag.jpg" alt="*">
+                        </div>
+                        <div class="pro-data">
+                            <div class="pro-description"><span>
+                                Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                            </span></div>
+                            <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                            <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                            <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                        </div>
+                        <div class="sale-r --red"><img src="./assets/discount-do.png" alt="*"> <span>In the sale</span></div>
+                    </div>
+                </a>
+            </div>
+            <div class="products-box">
+                <a href="product-details.html" class="products-box-address">
+                    <div class="pro-card">
+                        <div class="pro-image_box">
+                            <img class="pro-img" src="./assets/Products/cm4nr5bifoubkc6m5k9g.jpg" alt="*">
+                        </div>
+                        <div class="pro-data">
+                            <div class="pro-description"><span>
+                                Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                            </span></div>
+                            <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                            <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                            <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                        </div>
+                        <div class="sale-r --blue"><img src="./assets/discount-do.png" alt="*"> <span>In the sale</span></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="content-r-image-box">
+            <a href="#">
+                <img src="./assets/i-img2.jpg" alt="*">
+            </a>
+        </div>
+
+        <div class="main-content-box">
+            <div class="products-box">
+                <a href="product-details.html" class="products-box-address">
+                    <div class="pro-card">
+                        <div class="pro-image_box">
+                            <img class="pro-img" src="./assets/Products/cm015qpm4v40qhefsl80.jpg" alt="*">
+                        </div>
+                        <div class="pro-data">
+                            <div class="pro-description"><span>
+                                Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                            </span></div>
+                            <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                            <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                            <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                        </div>
+                        <div class="sale-r"><img src="./assets/discount-do.png" alt="*"> <span>In the sale</span></div>
+                    </div>
+                </a>
+            </div>
+            <div class="products-box">
+                <a href="product-details.html" class="products-box-address">
+                    <div class="pro-card">
+                        <div class="pro-image_box">
+                            <img class="pro-img" src="./assets/Products/cm4nr5bifoubkc6m5k9g.jpg" alt="*">
+                        </div>
+                        <div class="pro-data">
+                            <div class="pro-description"><span>
+                                Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                            </span></div>
+                            <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                            <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                            <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="products-box">
+                <a href="product-details.html" class="products-box-address">
+                    <div class="pro-card">
+                        <div class="pro-image_box">
+                            <img class="pro-img" src="./assets/Products/clm9av5enntcj8aa5720.jpg" alt="*">
+                        </div>
+                        <div class="pro-data">
+                            <div class="pro-description"><span>
+                                Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                            </span></div>
+                            <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                            <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                            <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                        </div>
+                        <div class="sale-r --red"><img src="./assets/discount-do.png" alt="*"> <span>In the sale</span></div>
+                    </div>
+                </a>
+            </div>
+            <div class="products-box">
+                <a href="product-details.html" class="products-box-address">
+                    <div class="pro-card">
+                        <div class="pro-image_box">
+                            <img class="pro-img" src="./assets/Products/cgcklrvhj8j9g69ah6ug.jpg" alt="*">
+                        </div>
+                        <div class="pro-data">
+                            <div class="pro-description"><span>
+                                Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                            </span></div>
+                            <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                            <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                            <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                        </div>
+                        <div class="sale-r --blue"><img src="./assets/discount-do.png" alt="*"> <span>In the sale</span></div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="products-box">
+                <a href="product-details.html" class="products-box-address">
+                    <div class="pro-card">
+                        <div class="pro-image_box">
+                            <img class="pro-img" src="./assets/Products/cgk51tj57mg9720de93g.jpg" alt="*">
+                        </div>
+                        <div class="pro-data">
+                            <div class="pro-description"><span>
+                                Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                            </span></div>
+                            <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                            <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                            <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="products-box">
+                <a href="product-details.html" class="products-box-address">
+                    <div class="pro-card">
+                        <div class="pro-image_box">
+                            <img class="pro-img" src="./assets/Products/cjhnbpkvutv1klhdm3d0.jpg" alt="*">
+                        </div>
+                        <div class="pro-data">
+                            <div class="pro-description"><span>
+                                Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                            </span></div>
+                            <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                            <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                            <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="products-box">
+                <a href="product-details.html" class="products-box-address">
+                    <div class="pro-card">
+                        <div class="pro-image_box">
+                            <img class="pro-img" src="./assets/Products/cjvfngcjvf2qegt3945g.jpg" alt="*">
+                        </div>
+                        <div class="pro-data">
+                            <div class="pro-description"><span>
+                                Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                            </span></div>
+                            <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                            <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                            <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                        </div>
+                        <div class="sale-r"><img src="./assets/discount-do.png" alt="*"> <span>In the sale</span></div>
+                    </div>
+                </a>
+            </div>
+            <div class="products-box">
+                <a href="product-details.html" class="products-box-address">
+                    <div class="pro-card">
+                        <div class="pro-image_box">
+                            <img class="pro-img" src="./assets/Products/clgdaf5ennt1kt4dklkg.jpg" alt="*">
+                        </div>
+                        <div class="pro-data">
+                            <div class="pro-description"><span>
+                                Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                            </span></div>
+                            <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                            <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                            <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="products-box">
+                <a href="product-details.html" class="products-box-address">
+                    <div class="pro-card">
+                        <div class="pro-image_box">
+                            <img class="pro-img" src="./assets/Products/clje9atennt6m290dtsg.jpg" alt="*">
+                        </div>
+                        <div class="pro-data">
+                            <div class="pro-description"><span>
+                                Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                            </span></div>
+                            <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                            <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                            <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="products-box">
+                <a href="product-details.html" class="products-box-address">
+                    <div class="pro-card">
+                        <div class="pro-image_box">
+                            <img class="pro-img" src="./assets/Products/cm015qpm4v40qhefsl80.jpg" alt="*">
+                        </div>
+                        <div class="pro-data">
+                            <div class="pro-description"><span>
+                                Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                            </span></div>
+                            <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                            <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                            <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                        </div>
+                        <div class="sale-r"><img src="./assets/discount-do.png" alt="*"> <span>In the sale</span></div>
+                    </div>
+                </a>
+            </div>
+            <div class="products-box">
+                <a href="product-details.html" class="products-box-address">
+                    <div class="pro-card">
+                        <div class="pro-image_box">
+                            <img class="pro-img" src="./assets/Products/cm0ijlhuf2i84h4p58ag.jpg" alt="*">
+                        </div>
+                        <div class="pro-data">
+                            <div class="pro-description"><span>
+                                Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                            </span></div>
+                            <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                            <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                            <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                        </div>
+                        <div class="sale-r --red"><img src="./assets/discount-do.png" alt="*"> <span>In the sale</span></div>
+                    </div>
+                </a>
+            </div>
+            <div class="products-box">
+                <a href="product-details.html" class="products-box-address">
+                    <div class="pro-card">
+                        <div class="pro-image_box">
+                            <img class="pro-img" src="./assets/Products/cm4nr5bifoubkc6m5k9g.jpg" alt="*">
+                        </div>
+                        <div class="pro-data">
+                            <div class="pro-description"><span>
+                                Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                            </span></div>
+                            <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                            <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                            <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                        </div>
+                        <div class="sale-r --blue"><img src="./assets/discount-do.png" alt="*"> <span>In the sale</span></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="meta-visible-close-o-box">
+            <div class="visible-close-o-box"><span style="font-weight: 500; margin: 0 5px 0 0; ">More products</span> <ion-icon name="chevron-down-outline" class="botProIcon"></ion-icon></div>
+        </div>
+
+        <div class="visible_MoreProducts">
+            <div class="main-content-box">
+                <div class="products-box">
+                    <a href="product-details.html" class="products-box-address">
+                        <div class="pro-card">
+                            <div class="pro-image_box">
+                                <img class="pro-img" src="./assets/Products/cm015qpm4v40qhefsl80.jpg" alt="*">
+                            </div>
+                            <div class="pro-data">
+                                <div class="pro-description"><span>
+                                    Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                                </span></div>
+                                <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                                <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                                <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                            </div>
+                            <div class="sale-r"><img src="./assets/discount-do.png" alt="*"> <span>In the sale</span></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="products-box">
+                    <a href="product-details.html" class="products-box-address">
+                        <div class="pro-card">
+                            <div class="pro-image_box">
+                                <img class="pro-img" src="./assets/Products/cm4nr5bifoubkc6m5k9g.jpg" alt="*">
+                            </div>
+                            <div class="pro-data">
+                                <div class="pro-description"><span>
+                                    Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                                </span></div>
+                                <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                                <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                                <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="products-box">
+                    <a href="product-details.html" class="products-box-address">
+                        <div class="pro-card">
+                            <div class="pro-image_box">
+                                <img class="pro-img" src="./assets/Products/clm9av5enntcj8aa5720.jpg" alt="*">
+                            </div>
+                            <div class="pro-data">
+                                <div class="pro-description"><span>
+                                    Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                                </span></div>
+                                <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                                <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                                <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                            </div>
+                            <div class="sale-r --red"><img src="./assets/discount-do.png" alt="*"> <span>In the sale</span></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="products-box">
+                    <a href="product-details.html" class="products-box-address">
+                        <div class="pro-card">
+                            <div class="pro-image_box">
+                                <img class="pro-img" src="./assets/Products/cgcklrvhj8j9g69ah6ug.jpg" alt="*">
+                            </div>
+                            <div class="pro-data">
+                                <div class="pro-description"><span>
+                                    Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                                </span></div>
+                                <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                                <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                                <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                            </div>
+                            <div class="sale-r --blue"><img src="./assets/discount-do.png" alt="*"> <span>In the sale</span></div>
+                        </div>
+                    </a>
+                </div>
+    
+                <div class="products-box">
+                    <a href="product-details.html" class="products-box-address">
+                        <div class="pro-card">
+                            <div class="pro-image_box">
+                                <img class="pro-img" src="./assets/Products/cgk51tj57mg9720de93g.jpg" alt="*">
+                            </div>
+                            <div class="pro-data">
+                                <div class="pro-description"><span>
+                                    Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                                </span></div>
+                                <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                                <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                                <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="products-box">
+                    <a href="product-details.html" class="products-box-address">
+                        <div class="pro-card">
+                            <div class="pro-image_box">
+                                <img class="pro-img" src="./assets/Products/cjhnbpkvutv1klhdm3d0.jpg" alt="*">
+                            </div>
+                            <div class="pro-data">
+                                <div class="pro-description"><span>
+                                    Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                                </span></div>
+                                <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                                <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                                <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="products-box">
+                    <a href="product-details.html" class="products-box-address">
+                        <div class="pro-card">
+                            <div class="pro-image_box">
+                                <img class="pro-img" src="./assets/Products/cjvfngcjvf2qegt3945g.jpg" alt="*">
+                            </div>
+                            <div class="pro-data">
+                                <div class="pro-description"><span>
+                                    Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                                </span></div>
+                                <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                                <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                                <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                            </div>
+                            <div class="sale-r"><img src="./assets/discount-do.png" alt="*"> <span>In the sale</span></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="products-box">
+                    <a href="product-details.html" class="products-box-address">
+                        <div class="pro-card">
+                            <div class="pro-image_box">
+                                <img class="pro-img" src="./assets/Products/clgdaf5ennt1kt4dklkg.jpg" alt="*">
+                            </div>
+                            <div class="pro-data">
+                                <div class="pro-description"><span>
+                                    Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                                </span></div>
+                                <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                                <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                                <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="products-box">
+                    <a href="product-details.html" class="products-box-address">
+                        <div class="pro-card">
+                            <div class="pro-image_box">
+                                <img class="pro-img" src="./assets/Products/clje9atennt6m290dtsg.jpg" alt="*">
+                            </div>
+                            <div class="pro-data">
+                                <div class="pro-description"><span>
+                                    Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                                </span></div>
+                                <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                                <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                                <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="products-box">
+                    <a href="product-details.html" class="products-box-address">
+                        <div class="pro-card">
+                            <div class="pro-image_box">
+                                <img class="pro-img" src="./assets/Products/cm015qpm4v40qhefsl80.jpg" alt="*">
+                            </div>
+                            <div class="pro-data">
+                                <div class="pro-description"><span>
+                                    Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                                </span></div>
+                                <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                                <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                                <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                            </div>
+                            <div class="sale-r"><img src="./assets/discount-do.png" alt="*"> <span>In the sale</span></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="products-box">
+                    <a href="product-details.html" class="products-box-address">
+                        <div class="pro-card">
+                            <div class="pro-image_box">
+                                <img class="pro-img" src="./assets/Products/cm0ijlhuf2i84h4p58ag.jpg" alt="*">
+                            </div>
+                            <div class="pro-data">
+                                <div class="pro-description"><span>
+                                    Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                                </span></div>
+                                <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                                <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                                <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                            </div>
+                            <div class="sale-r --red"><img src="./assets/discount-do.png" alt="*"> <span>In the sale</span></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="products-box">
+                    <a href="product-details.html" class="products-box-address">
+                        <div class="pro-card">
+                            <div class="pro-image_box">
+                                <img class="pro-img" src="./assets/Products/cm4nr5bifoubkc6m5k9g.jpg" alt="*">
+                            </div>
+                            <div class="pro-data">
+                                <div class="pro-description"><span>
+                                    Aqlli televizor Xiaomi Mi TV A2 55", 50", 43", 32" Android TV, ekran o'lchamlari 4K/FullHD
+                                </span></div>
+                                <div class="pro-sale-p"><span>270 000 so'm x 12 month</span></div>
+                                <div class="r-o-prices"><span id="old-price">4238 so'm</span><span id="now-price">2449 so'm</span></div>
+                                <div class="add-pro-but"><button id="p-like"><i class='bx bx-heart'></i></button><button id="add-pro"><i class='bx bx-cart-add'></i></button></div>
+                            </div>
+                            <div class="sale-r --blue"><img src="./assets/discount-do.png" alt="*"> <span>In the sale</span></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="meta-visible-close-o-box" style="margin: 25px 0;">
+                <div class="visible-close-o-n-box"><span style="font-weight: 500; margin: 0 5px 0 0; ">All Products</span> <ion-icon name="chevron-down-outline" class="botProIcon"></ion-icon></div>
+            </div>
+        </div>
+
+        <!-- Footer Part -->
+        <div class="footer">
+            <div class="top-downloads-apps">
+                <div class="sq3-title">
+                    <span>Our mobile application is available in AppGallery, <br>App store and Google play</span>
+                </div>
+                <div class="sq3-content_box">
+                    <a href="#"><img src="./assets/appstore.svg" alt="*"></a>
+                    <a href="#"><img src="./assets/googleplay.svg" alt="*"></a>
+                    <a href="#"><img src="./assets/appgallery.svg" alt="*"></a>
+                </div>
+            </div>
+            <footer>
+                <div class="content">
+                    <div class="top">
+                      <div class="logo-details">
+                        <!-- <i class="fab fa-slack"></i> -->
+                        <!-- <span class="logo_name">CodingLab</span> -->
+                        <a href="index.html" id="logo-c-f">
+                            <img class="logo" src="./assets/logo.png" alt="*">
+                        </a>
+                      </div>
+                      <div class="media-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                      </div>
+                    </div>
+                    <div class="link-boxes">
+                    <ul class="box" style="width: 280px;">
+                        <li class="link_name">Support number</li>
+                        <li><a href="#" style="font-size: 1.4rem; font-weight: 600; color: var(--ye-main-s); opacity: 100%;">+998 (99) 999 99 99</a></li>
+                        <li><a href="#" style="display: flex; align-items: center; font-size: 1rem;"><i style="font-size: 1.35rem; margin-right: 5px; color: var(--red-p-color);" class='bx bx-current-location'></i> O'zbekistan, Toshkent</a></li>
+                        <li><a href="#" style="display: flex; align-items: center; font-size: 1rem;"><i style="font-size: 1.35rem; margin-right: 5px; color: var(--ye-main-s);" class='bx bx-envelope'></i> info@topexpress.uz</a></li>
+                      </ul>
+                      <ul class="box">
+                        <li class="link_name">About Us</li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Vacancies</a></li>
+                        <li><a href="#">Refund and exchange of goods</a></li>
+                      </ul>
+                      <ul class="box">
+                        <li class="link_name">To users</li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact us</a></li>
+                      </ul>
+                      <ul class="box">
+                        <li class="link_name">To entrepreneurs</li>
+                        <li><a href="#">Selling on Top Express</a></li>
+                        <li><a href="#">Top Express cabinet</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="bottom-details">
+                    <div class="bottom_text">
+                      <span class="copyright_text">&#169; 2023 <a href="#">Top Express</a>All rights reserved</span>
+                      <span class="policy_terms">
+                        <a href="#">Privacy policy</a>
+                        <a href="#">Terms & condition</a>
+                      </span>
+                    </div>
+                  </div>
+            </footer>
+        </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="suggestions.js"></script>
+    <!-- JavaScript JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.slider').slick({
+                dots: false,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                prevArrow: '<i class="fas fa-chevron-left slick-prev"></i>',
+                nextArrow: '<i class="fas fa-chevron-right slick-next"></i>',
+            });
+        });
+    </script>
+</body>
+</html>
